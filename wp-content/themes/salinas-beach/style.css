@@ -169,7 +169,9 @@ body { background-color: #F6F0E6; background-image: url("data:image/svg+xml,%3Cs
 .sushi-band { background: linear-gradient(160deg, #10202E, #172F40); border-radius: 28px; padding: clamp(1.8rem, 4.5vw, 3.2rem) !important; margin-top: 2rem !important; margin-bottom: 2rem !important; color: #E9E1D4; }
 .sushi-band__title { color: #fff; font-size: clamp(2.2rem, 4vw, 3rem); margin-top: 0; }
 .sushi-photos { display: flex; justify-content: center; gap: clamp(.6rem, 2vw, 1.2rem); flex-wrap: wrap; margin: 1rem 0 1.8rem; }
-.sushi-photos img { width: clamp(84px, 11vw, 128px); aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 3px solid rgba(196,154,94,.7); }
+.sushi-photos { display: grid !important; grid-template-columns: repeat(4, 1fr); gap: .9rem !important; }
+.sushi-photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; border: 0; box-shadow: 0 14px 30px -18px rgba(0,0,0,.7); }
+@media (max-width: 781px) { .sushi-photos { grid-template-columns: 1fr 1fr; } }
 .sushi-grid { display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .sushi-grid > * { margin: 0 !important; }
 .sushi-band .menu-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); box-shadow: none; margin: 0 !important; padding: 1.3rem !important; }
